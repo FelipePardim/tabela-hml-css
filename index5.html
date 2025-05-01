@@ -18,23 +18,34 @@
 
   function adicao() {
    valorContador++;
-   atualizaValorNaTela
+   atualizaValorNaTela();
    console.log(valorContador);
   }
 
   function subtracao() {
    valorContador--;
-   atualizaValorNaTela
+   atualizaValorNaTela();
    console.log(valorContador);
   }
 
   function reset() {
    valorContador = 0;
-   atualizaValorNaTela
+   atualizaValorNaTela();
   }
 
   function atualizaValorNaTela() {
    document.getElementById('contador').textContent = valorContador;
+
+   if (valorContador < 0) {
+    // Receber cor vermelha
+    document.getElementById('contador').style.color = 'red'
+   } else if (valorContador > 0) {
+    // Recebe cor Azul
+    document.getElementById('contador').style.color = 'blue'
+   } else {
+    // Recebe cor preta
+    document.getElementById('contador').style.color = 'black'
+   }
   }
  </script>
 </body>

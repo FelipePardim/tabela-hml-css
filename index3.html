@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+  <h1 id="contador">0</h1>
+  <button onclick="subtracao()">-1</button>
+  <button onclick="adicao()">+1</button>
+  <script>
+   let valorContador = 0;
+   const VALOR_MAXIMO = 10;
+
+   function adicao () {
+    if(valorContador < 10) {
+      verificaMaximo(valorContador);
+      valorContador++;
+    }
+    document.getElementById('contador').textContent = valorContador;
+    console.log(valorContador);
+   }
+
+   function subtracao () {
+    valorContador--;
+    document.getElementById('contador').textContent = valorContador;
+    console.log(valorContador);
+   }
+
+   function verificaMaximo () {
+    if (valorContador == VALOR_MAXIMO) {
+      alert("O valor maximo é 10");
+      console.log("O valor maximo é 10");
+    }
+   }
+  </script>
+</body>
+</html> 

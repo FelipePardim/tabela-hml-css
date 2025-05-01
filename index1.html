@@ -6,6 +6,16 @@
  <title>Document</title>
 </head>
 <body>
- 
+  <h1 id="contador">0</h1>
+  <button onclick="clicouBotao()">+1</button>
+  <script>
+   let valorContador = 0;
+
+   function clicouBotao () {
+    valorContador++;
+    document.getElementById('contador').textContent = valorContador;
+    console.log(valorContador);
+   }
+  </script>
 </body>
 </html>
